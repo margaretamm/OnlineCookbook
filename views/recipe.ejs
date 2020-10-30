@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+
+<div class="bg-img recipe">
+  <h2><%= title %> </h2>
+  <p><%= description %> </p>
+  <p><strong>Na tento recept budeš potrebovať:</strong></p>
+  <ul>
+    <% ingredients.forEach(function(ingredient){ %>
+      <li><%= ingredient %> </li>
+    <% }); %>
+  </ul>
+  <p><strong>Postup:</strong></p>
+  <p><%= content %> </p>
+</div>
+
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,40 @@
+<%- include("partials/header"); -%>
+
+<h1>Zapíš si nový recept</h1>
+
+<div class="ingredient-form col-md-4">
+  <form class="" action="/saveIngredient" method="post">
+    <div class="form-group form">
+      <label>Suroviny</label>
+      <input type="text" class="form-control bg-img" name="recipeIngredient">
+      <button type="submit" class="ingredient-btn" name="button">+</button>
+    </div>
+  </form>
+
+  <% newIngredient.forEach(function(ingredient) {%>
+
+  <form action="/delete" method="post">
+    <div class="item">
+      <input type="checkbox" name="checkbox" value="<%=ingredient%>" onChange="this.form.submit()">
+      <p> <%= ingredient %> </p>
+    </div>
+  </form>
+  <% }); %>
+</div>
+
+<div class="no-padding col-md-8">
+  <form class="" action="/compose" method="post">
+    <div class="form-group form">
+      <label>Názov</label>
+      <input type="text" class="form-control bg-img" name="recipeTitle" required>
+      <label>Popis</label>
+      <textarea type="text" class="form-control bg-img" name="recipeDescription" rows="3" cols="30" required></textarea>
+      <label>Postup</label>
+      <textarea type="text" class="form-control bg-img" name="recipeBody" rows="5" cols="30" required></textarea>
+      <button type="submit" class="btn btn-primary submit-btn" name="button">Zverejniť</button>
+    </div>
+  </form>
+</div>
+
+
+<%- include("partials/footer"); -%>

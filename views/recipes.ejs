@@ -1,0 +1,13 @@
+<%- include("partials/header"); -%>
+
+<h1>Recepty</h1>
+<p>Tu nájdeš všetky recepty z tvojho online kuchárskeho denníku. </p>
+
+
+<% recipes.forEach(function(recipe){ %>
+<h2><%= recipe.title %> </h2>
+<p><%= recipe.description.substring(0, 100) + "..." %> <a href="/recipe/<%= recipe._id %>">Zobraziť celý recept</a> </p>
+<% }); %>
+
+
+<%- include("partials/footer"); -%>
