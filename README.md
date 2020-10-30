@@ -1,6 +1,9 @@
 
 
 # Tvoja Online Kuchárska kniha
+
+Node web aplikácia na ukladanie receptov v Mongo databáze.
+
 Zapíš si a ulož svoje obľúbené recepty online. 
 
 ![image](/public/images/addNew.png)
